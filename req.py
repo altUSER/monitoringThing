@@ -4,5 +4,8 @@ import time
 host = "http://localhost/log"
 
 while True:
-    print(r.get(host).text)
+    try:
+        print(r.get(host).text, t=1)
+    except:
+        print("Error")
     time.sleep(1)
